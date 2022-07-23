@@ -1,0 +1,39 @@
+#qrcode-generator-container {
+    min-width: 60%;
+    max-width: 80%;
+    padding: 50px 0px;
+}
+
+#btn-col {
+    display: flex;
+    justify-content: center;
+}
+
+#qrcode-image-card .card-body .row .col-12{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#qrcode-spinner {
+    height: 20px;
+    width: 20px;
+}
+
+#loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#qrcode-generated-message {
+    margin-bottom: 0px;
+    color: #067106;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.btn {
+    width: 100%;
+    margin: 5px 0px;
+}
