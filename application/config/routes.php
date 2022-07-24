@@ -53,4 +53,17 @@ $route['default_controller'] = 'Main';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-$route['generate_qrcode_image'] = 'Main/generate_qrcode_image';
+/*
+|----------------
+| Routes to pages
+|----------------
+*/
+$route['about_me']['GET'] = 'Main/about_me';
+
+/*
+|--------------------------- 
+|Routes to QRCode Generator
+|---------------------------
+*/
+$route['qrcode_generator']['GET'] = 'QRCode_controller';
+$route['qrcode_generator/generate_qrcode_image']['POST'] = 'QRCode_controller/generate_qrcode_image';

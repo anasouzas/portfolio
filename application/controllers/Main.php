@@ -21,52 +21,13 @@ class Main extends CI_Controller
 	 */
 	public function index()
 	{
-		$this->load->view('main');
+		$data['page_title'] = 'Portfolio - Home Page';
+		render_page('main', $data);
 	}
 
-	public function generate_qrcode($qrcode_content, $qrcode_filename)
+	public function about_me() 
 	{
-		$this->load->library('ciqrcode');
-
-		$hex_data  = bin2hex($qrcode_content);
-		$filename  = $qrcode_filename . '.jpg';
-		$directory = 'assets/media/qrcodes/';
-
-		if (!file_exists($directory)) mkdir($directory, 0775, true);
-
-		$config['cacheable'] = true;
-		$config['imagedir' ] = $directory;
-		$config['quality'  ] = true;
-		$config['size'     ] = '1024';
-		$config['black'    ] = array(255,255,255);
-		$config['white'    ] = array(255,255,255);
-
-		$this->ciqrcode->initialize($config);
-
-		$params['data'    ] = $qrcode_content;
-		$params['level'   ] = 'L';
-		$params['size'    ] = 10;
-		$params['savename'] = FCPATH.$config['imagedir'].$filename;
-
-		$this->ciqrcode->generate($params);
-
-		$qrcode_image_path = $directory.$filename;
-
-		return $qrcode_image_path;
-	}
-
-	public function generate_qrcode_image()
-	{
-		$data_from_ajax    = $this->input->post();
-		$qrcode_content    = $data_from_ajax['qrcode_content'];
-		$qrcode_filename   = $data_from_ajax['qrcode_filename'];
-		$qrcode_image_path = $this->generate_qrcode($qrcode_content, $qrcode_filename);
-
-		$response = [
-			'status' => file_exists($qrcode_image_path) ? '1' : '0',
-			'qrcode_image_path' => $qrcode_image_path 
-		];
-		
-		echo json_encode($response);
+		$data['page_title'] = 'Portfolio - About Me';
+		render_page('about_me', $data);
 	}
 }

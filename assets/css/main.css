@@ -1,0 +1,107 @@
+/* 
+| --------------------- 
+| Styles for all pages
+| ---------------------
+*/
+body {
+	font-family: "Comic Sans", serif, sans-serif !important;
+}
+
+/* 
+| --------------------- 
+| Styles for Home Page
+| ---------------------
+*/
+#projects-section {
+    background-color:#fcf3cf;
+    margin: 0px;
+}
+
+#projects-container {
+    padding: 20px;
+}
+
+#projects-section-title-row, 
+#projects-section-cards-row {
+    margin: 10px 0px;
+}
+
+.card {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.projects-card-header {
+	background-color: #007bff !important;
+	color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects-card-header h4 {
+    margin: 0px;
+}
+
+.projects-card-footer {
+	background-color: transparent !important;
+}
+
+#projects-section-title-col {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* 
+| ------------------------ 
+| Styles for about me page
+| ------------------------
+*/
+#about-me-section {
+    padding: 50px;
+}
+
+/* 
+| ---------------------------- 
+| Styles for QRCode Generator
+| ----------------------------
+*/
+#qrcode-generator-container {
+	min-width: 60%;
+	max-width: 80%;
+	padding: 50px 0px;
+}
+
+#btn-col {
+	display: flex;
+	justify-content: center;
+}
+
+#qrcode-image-card .card-body .row .col-12 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#qrcode-spinner {
+	height: 20px;
+	width: 20px;
+}
+
+#loading {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#qrcode-generated-message {
+	margin-bottom: 0px;
+	color: #067106;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.btn {
+	width: 100%;
+	margin: 5px 0px;
+}
